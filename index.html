@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS-Bubble-Shooter</title>
+	<style type="text/css">
+		canvas {
+		    margin: 10px;
+		    background: #fff;
+		    border: 1px solid #000;
+		    -webkit-border-radius: 10px;
+		    -moz-border-radius: 10px;
+		    border-radius: 10px;
+		}
+
+		.multilayer {
+		    position: relative;
+		    margin-bottom: 550px;
+		}
+
+		.multilayer canvas {
+		    background: transparent;
+		    position: fixed;
+		    left: 0;
+		    top: 20;
+		    z-index: 1;
+		}
+
+		.multilayer canvas[id$="-bg"] {
+		    background-color: #333;
+		    position: fixed;
+		    left: 0;
+		    top: 20;
+		    z-index: 0;
+		}
+	</style>
+	<script type="text/javascript" src="bubbleshooter.js"></script>
+</head>
+<body>
+	CONTROLS: Arrow keys: [up] to thrust; [left] and [right] to turn; [space bar] to fire. </br>
+	GOAL: Shoot bubbles. You can't die, but you can get bored and quit.</br>
+	You can view simple game stats in the JavaScript console (that's CTRL+SHIFT+J in Chrome).</br>
+
+	<div class="multilayer">
+	  <canvas id="bubbleshooter-bg" width="500" height="500">Canvas not supported!</canvas>
+	  <canvas id="bubbleshooter" width="500" height="500">Canvas not supported!</canvas>
+	</div>
+
+</body>
+</html>
